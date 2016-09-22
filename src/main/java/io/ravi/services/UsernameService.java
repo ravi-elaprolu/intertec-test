@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface UsernameService {
 
-    Result<Boolean, List<String>>  checkUsername(String name);
+    Result<Boolean, List<String>> checkUsernameAndSave(String name);
 
     List<Username> findAll();
 }

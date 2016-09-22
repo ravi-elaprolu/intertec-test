@@ -39,7 +39,7 @@ public class MainController {
         if (validatorResult.hasErrors()) {
             model.addAttribute("errors", validatorResult.getAllErrors());
         } else {
-            Result<Boolean, List<String>> result = usernameService.checkUsername(name);
+            Result<Boolean, List<String>> result = usernameService.checkUsernameAndSave(name);
             model.addAttribute("result", result);
         }
 

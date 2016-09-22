@@ -2,6 +2,9 @@ package io.ravi.services;
 
 import io.ravi.domain.Username;
 import io.ravi.repository.UsernameRepository;
+import io.ravi.services.BlackListedService;
+import io.ravi.services.Result;
+import io.ravi.services.UsernameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BeanPropertyBindingResult;
@@ -19,7 +22,7 @@ public class UsernameServiceImpl implements UsernameService {
     @Autowired
     BlackListedService blackListedService;
 
-    public Result<Boolean, List<String>> checkUsername(String name) {
+    public Result<Boolean, List<String>> checkUsernameAndSave(String name) {
         Username username = new Username();
         username.setName(name);
 
