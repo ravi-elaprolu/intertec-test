@@ -36,10 +36,4 @@ public class UsernameServiceImplTest {
         Assert.assertFalse(result0.getValue());
     }
 
-    @Test
-    public void shouldFailIfNameIsOnBlacklist(){
-        Boolean condition = blackListedService.checkIfExists("cannabis");
-        Assert.assertTrue(condition);
-    }
-
 }
